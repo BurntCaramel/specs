@@ -1,0 +1,58 @@
+{
+	"icingStandard": {"id": "burnticing", "version": "0.1.0"},
+	"specsIdentifier": {"id": "burntcaramel-blik", "version": "1.0.0"},
+	"blockTypesByGroup": {
+		"particular": [
+			{
+				"id": "blikPlaceholder",
+				"title": "Blik Placeholder",
+				"choices": [
+					{
+						"id": "header",
+						"title": "Blik Header",
+						"description": "The Blik logo"
+					},
+					{
+						"id": "mac-app-store-link",
+						"title": "Blik Mac App Store Link",
+						"description": "The official-style black button linking to the Mac App Store."
+					}
+				]
+			},
+			{
+				"id": "featureHeading",
+				"title": "Feature Heading",
+				"fieldsAreRequired": true,
+				"fields": [
+					{"id": "secondaryText", "title": "Secondary Text"},
+					{"id": "primaryText", "title": "Primary Text"}
+				],
+				"outerHTMLTagName": "h3",
+				"innerHTMLRepresentation": [
+					{
+						"tagName": "span",
+						"attributes": {
+							"className": "secondary"
+						},
+						"children": [
+							{
+								"text": ["fields", "secondaryText"]
+							}
+						]
+					},
+					{
+						"tagName": "span",
+						"attributes": {
+							"className": "primary"
+						},
+						"children": [
+							{
+								"text": ["fields", "primaryText"]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

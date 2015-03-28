@@ -1,0 +1,84 @@
+{
+	"icingStandard": {"id": "burnticing", "version": "0.1.0"},
+	"specsIdentifier": {"id": "burntcaramel-contact", "version": "1.0.0"},
+	"blockTypesByGroup": {
+		"particular": [
+			{
+				"id": "contactDetails",
+				"title": "Contact Details",
+				"fieldsAreRequired": false,
+				"fields": [
+					{"id": "businessName", "title": "Business Name"},
+					{"id": "streetAddress", "title": "Street Address"},
+					{"id": "locality", "title": "Locality"},
+					{"id": "region", "title": "Region"},
+					{"id": "postalCode", "title": "Postal Code"},
+					{"id": "country", "title": "Country"}
+				],
+				"innerHTMLRepresentation": [
+					{
+						"tagName": "div",
+						"attributes": {
+							"itemScope": true,
+							"itemType": "http://schema.org/Organization"
+						},
+						"children": [
+							{
+								"tagName": "section",
+								"attributes": {
+									"itemProp": "name"
+								},
+								"children": [
+									{
+										"text": ["fields", "businessName"]
+									}
+								]
+							},
+							{
+								"tagName": "article",
+								"attributes": {
+									"itemProp": "address",
+									"itemScope": true,
+									"itemType": "http://schema.org/PostalAddress"
+								},
+								"children": [
+									{
+										"tagName": "div",
+										"children": [
+											{
+												"text": ["fields", "streetAddress"]
+											},
+											{
+												"checkIsPresent": ["fields", "streetAddress"],
+												"text": ", "
+											},
+											{
+												"text": ["fields", "locality"]
+											},
+											{
+												"lineBreak": true
+											},
+											{
+												"text": ["fields", "region"]
+											},
+											{
+												"text": ["fields", "postalCode"]
+											},
+											{
+												"text": ["fields", "country"]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"onlineHTMLRepresentationCreator": {
+					"POST": "contactDetails/1.0/",
+					"JavaScript": "http://representations.burnticing.org/blocks/contactDetails/1.0/contactDetails.1.0.js"
+				}
+			}
+		]
+	}
+}
