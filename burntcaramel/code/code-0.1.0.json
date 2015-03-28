@@ -1,0 +1,47 @@
+{
+	"icingStandard": {"id": "burnticing", "version": "0.1.0"},
+	"specsIdentifier": {"id": "burntcaramel-code", "version": "0.1.0"},
+	"blockTypesByGroup": {
+		"particular": [
+			{
+				"id": "code",
+				"title": "Code",
+				"fields": [
+					{
+						"id": "text",
+						"title": "Enter the code’s text",
+						"type": "text-long"
+					}
+				],
+				"outerHTMLTagName": "pre",
+				"innerHTMLRepresentation": [
+					{
+						"tagName": "code",
+						"children": [
+							{
+								"text": ["fields", "text"]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"traitTypes": [
+		{
+			"id": "code",
+			"title": "Code",
+			"allowedForAnyTextItems": true,
+			"innerHTMLRepresentation": [
+				{
+					"tagName": "code",
+					"children": [
+						{
+							"placeOriginalElement": true
+						}
+					]
+				}
+			]
+		}
+	]
+}
