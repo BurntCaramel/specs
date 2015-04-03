@@ -1,6 +1,6 @@
 {
 	"icingStandard": {"id": "burnticing", "version": "0.1.0"},
-	"specsIdentifier": {"id": "burntcaramel", "version": "1.0.0"},
+	"specsIdentifier": {"id": "burntcaramel", "version": "1.0.1"},
 	"defaultSubsectionType": "normal",
 	"subsectionTypes": [
 		{
