@@ -2,7 +2,7 @@
 	"icingStandard": {"id": "burnticing", "version": "0.1.0"},
 	"specsIdentifier": {"id": "burntcaramel-code", "version": "0.1.0"},
 	"blockTypesByGroup": {
-		"particular": [
+		"media": [
 			{
 				"id": "code",
 				"title": "Code",
