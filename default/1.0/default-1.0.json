@@ -135,10 +135,80 @@
 						]
 					}
 				]
+			},
+			{
+				"disabled": true,
+				"id": "embed",
+				"title": "Embed",
+				"fields": [
+					{
+						"id": "embedCode",
+						"type": "text-long",
+						"title": "Embed Code"
+					}
+				],
+				"innerHTMLRepresentation": [
+					{
+						"unsafeHTML": ["fields", "embedCode"]
+					}
+				]
 			}
 		],
-		"particular_OFF": [
+		"particular": [
 			{
+				"id": "placeholder",
+				"title": "Placeholder",
+				"type": "fields",
+				"fields": [
+					{
+						"id": "typeChoice",
+						"title": "Type",
+						"type": "choice",
+						"choices": [
+							{
+								"id": "providedIdentifier",
+								"title": "Provided",
+								"fields": [
+									{
+										"id": "identifier",
+										"type": "providedValueChoice",
+										"source": "placeholderIdentifiers"
+									}
+								]
+							},
+							{
+								"id": "custom",
+								"title": "Custom",
+								"fields": [
+									{
+										"type": "text",
+										"id": "identifier",
+										"title": "Custom Identifier",
+										"placeholder": "Enter a custom identifier"
+									}
+								]
+							}
+						]
+					}
+				],
+				"innerHTMLRepresentation": [
+					{
+						"tagName": "div",
+						"children": [
+							{
+								"text": {
+									"firstWhichIsPresent": [
+										["fields", "typeChoice", "custom", "identifier"],
+										["fields", "typeChoice", "storedIdentifier", "identifier"]
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				"disabled": true,
 				"id": "contactDetails",
 				"title": "Contact Details",
 				"fieldsAreRequired": false,
@@ -215,22 +285,7 @@
 				}
 			},
 			{
-				"id": "blikPlaceholder",
-				"title": "Blik Placeholder",
-				"choices": [
-					{
-						"id": "header",
-						"title": "Blik Header",
-						"description": "The Blik logo"
-					},
-					{
-						"id": "mac-app-store-link",
-						"title": "Blik Mac App Store Link",
-						"description": "The official-style black button linking to the Mac App Store."
-					}
-				]
-			},
-			{
+				"disabled": true,
 				"id": "featureHeading",
 				"title": "Feature Heading",
 				"fieldsAreRequired": true,
@@ -305,7 +360,6 @@
 				"media": true,
 				"particular": true
 			},
-			"disabled": false,
 			"title": "Link",
 			"type": "fields",
 			"fields": [
@@ -382,12 +436,53 @@
 			]
 		},
 		{
+			"disabled": true,
 			"id": "lineBreakAfter",
 			"title": "Line Break After",
 			"allowedForAnyTextItems": true,
 			"afterHTMLRepresentation": [
 				{
 					"tagName": "br"
+				}
+			]
+		},
+		{
+			"id": "finePrint",
+			"title": "Fine Print",
+			"allowedForAnyTextItems": true,
+			"innerHTMLRepresentation": [
+				{
+					"tagName": "small",
+					"children": [
+						{
+							"placeOriginalElement": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "abbreviation",
+			"title": "Abbreviation",
+			"allowedForAnyTextItems": true,
+			"fields": [
+				{
+					"id": "description",
+					"title": "Description",
+					"type": "text"
+				}
+			],
+			"innerHTMLRepresentation": [
+				{
+					"tagName": "abbr",
+					"attributes": {
+						"title": ["fields", "description"],
+					},
+					"children": [
+						{
+							"placeOriginalElement": true
+						}
+					]
 				}
 			]
 		},
