@@ -1,6 +1,6 @@
 {
   "name": "icing-spec-burnt",
-  "version": "0.1.0",
+  "version": "0.1.1a1",
   "description": "Default Icing Specs",
   "main": "index.js",
   "scripts": {
