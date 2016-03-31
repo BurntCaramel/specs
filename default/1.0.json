@@ -1,6 +1,7 @@
 {
-	"icingStandard": {"id": "burnticing", "version": "0.1.0"},
-	"specsIdentifier": {"id": "burntcaramel", "version": "1.0.1"},
+	"icingStandard": { "id": "burnticing", "version": "0.1.0" },
+    "name": "burntcaramel",
+    "version": "1.0.1",
 	"defaultSubsectionType": "normal",
 	"subsectionTypes": [
 		{
@@ -476,7 +477,7 @@
 				{
 					"tagName": "abbr",
 					"attributes": {
-						"title": ["fields", "description"],
+						"title": ["fields", "description"]
 					},
 					"children": [
 						{

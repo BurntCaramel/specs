@@ -476,7 +476,7 @@
 				{
 					"tagName": "abbr",
 					"attributes": {
-						"title": ["fields", "description"],
+						"title": ["fields", "description"]
 					},
 					"children": [
 						{
