@@ -1,0 +1,47 @@
+{
+	"icingStandard": {"id": "burnticing", "version": "0.1.0"},
+	"specsIdentifier": {"id": "burntcaramel-pinterest", "version": "0.1.0"},
+	"blockTypesByGroup": {
+		"media": [
+			{
+				"id": "pinterestProfile",
+				"title": "Pinterest Profile",
+				"fields": [
+					{
+						"id": "username",
+						"type": "text",
+						"title": "Pinterest Username"
+					}
+				],
+				"innerHTMLRepresentation": [
+					{
+						"tagName": "a",
+						"attributes": {
+							"data-pin-do": "embedUser",
+							"href": {
+								"join": [
+									"https://www.pinterest.com/",
+									["fields", "username"],
+									"/"
+								]
+							},
+							"data-pin-scale-width": "80",
+							"data-pin-scale-height": "200",
+							"data-pin-board-width": "400"
+						},
+						"children": [
+							"Visit profile on Pinterest."
+						]
+					}
+				],
+				"scriptsForHTML": [
+					{
+						"once": true,
+						"reloadAfterEditing": true,
+						"src": "//assets.pinterest.com/js/pinit.js"
+					}
+				]
+			}
+		]
+	}
+}
