@@ -1,0 +1,46 @@
+﻿{
+	"icingStandard": {"id": "burnticing", "version": "0.1.0"},
+	"id": "burntcaramel-markdown",
+	"version": "0.1.0",
+	"blockTypesByGroup": {
+		"text": [
+			{
+				"id": "markdown",
+				"title": "Markdown",
+				"fields": [
+					{
+						"id": "text",
+						"title": "Enter Markdown",
+						"type": "text",
+						"long": true
+					}
+				],
+				"htmlRepresentation": {
+					"outerTagName": "pre",
+					"innerHTML": [
+						{
+							"tagName": "code",
+							"children": [
+								{
+									"text": ["fields", "text"]
+								}
+							]
+						}
+					],
+					"blockOptions": {}
+				},
+				"outerHTMLTagName": "pre",
+				"innerHTMLRepresentation": [
+					{
+						"tagName": "code",
+						"children": [
+							{
+								"text": ["fields", "text"]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

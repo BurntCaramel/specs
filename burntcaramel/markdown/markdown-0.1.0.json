@@ -1,0 +1,45 @@
+{
+	"icingStandard": {"id": "burnticing", "version": "0.1.0"},
+	"specsIdentifier": {"id": "burntcaramel-markdown", "version": "0.1.0"},
+	"scripts": [
+		{
+			"id": "showdown",
+			"once": true,
+			"src": "https://cdnjs.cloudflare.com/ajax/libs/showdown/0.4.0/Showdown.min.js"
+		},
+	],
+	"handlers": [
+		{
+			"id": "showdown",
+			"requires": {
+				"scripts": [
+					"showdown"
+				]
+			},
+			"src": "showdown-handler.js"
+		}
+	],
+	"blockTypesByGroup": {
+		"media": [
+			{
+				"id": "markdown",
+				"title": "Markdown",
+				"fields": [
+					{
+						"id": "markdown",
+						"type": "text-long",
+						"title": "Enter Markdown (Showdown)"
+					}
+				],
+				"innerHTMLRepresentation": [
+					{
+						"unsafeHTML": {
+							"handler": "showdown",
+							"input": ["fields", "markdown"]
+						}
+					}
+				]
+			}
+		]
+	}
+}
