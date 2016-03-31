@@ -1,0 +1,22 @@
+{
+	"icingStandard": {"id": "burnticing", "version": "0.1.0"},
+	"specsIdentifier": {"id": "burntcaramel-video", "version": "0.1.0"},
+	"blockTypesByGroup": {
+		"media": [
+			{
+				"id": "embeddedVideo",
+				"title": "Embedded Video",
+				"fields": [
+					{
+						"id": "videoURL",
+						"type": "url",
+						"title": "Video URL (YouTube/Vimeo)"
+					}
+				],
+				"HTMLRepresentationFromServer": {
+					"POST": "/1.0/"
+				}
+			}
+		]
+	}
+}
